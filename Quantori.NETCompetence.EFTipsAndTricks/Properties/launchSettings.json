@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Quantori.NETCompetence.EFTipsAndTricks": {
+      "commandName": "Project",
+      "commandLineArgs": "--create-users --read-users"
+    }
+  }
+}
