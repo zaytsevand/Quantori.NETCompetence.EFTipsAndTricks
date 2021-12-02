@@ -1,7 +1,4 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-
-namespace Quantori.NETCompetence.EFTipsAndTricks.Models;
+﻿namespace Quantori.NETCompetence.EFTipsAndTricks.Examples.DTOs;
 
 public class DetailedAddress : Address
 {
@@ -14,15 +11,5 @@ public class DetailedAddress : Address
     public override string ToString()
     {
         return $"{Zip}, {Country}, {State}, {City}, {Street}";
-    }
-}
-
-public class Address
-{
-    public string? FullAddress { get; set; }
-
-    public override string ToString()
-    {
-        return FullAddress ?? string.Empty;
     }
 }

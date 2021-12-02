@@ -1,14 +1,15 @@
 ﻿using Microsoft.Extensions.Logging;
+using Quantori.NETCompetence.EFTipsAndTricks.Examples.DTOs;
 using Quantori.NETCompetence.EFTipsAndTricks.Models;
 
-namespace Quantori.NETCompetence.EFTipsAndTricks;
+namespace Quantori.NETCompetence.EFTipsAndTricks.Examples;
 
-internal class Example1
+internal class DynamicallyTypedDataInEntities
 {
-    private readonly ILogger<Example1> _logger;
+    private readonly ILogger<DynamicallyTypedDataInEntities> _logger;
     private readonly AppContext _context;
 
-    public Example1(ILogger<Example1> logger, AppContext context)
+    public DynamicallyTypedDataInEntities(ILogger<DynamicallyTypedDataInEntities> logger, AppContext context)
     {
         _logger = logger;
         _context = context;

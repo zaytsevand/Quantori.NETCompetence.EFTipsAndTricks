@@ -5,6 +5,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Console;
 using Quantori.NETCompetence.EFTipsAndTricks;
+using Quantori.NETCompetence.EFTipsAndTricks.Examples;
 using AppContext = Quantori.NETCompetence.EFTipsAndTricks.AppContext;
 
 using var host = Host.CreateDefaultBuilder(args)
@@ -16,12 +17,12 @@ using var host = Host.CreateDefaultBuilder(args)
             .AddConsole()
             .SetMinimumLevel(LogLevel.Warning)
             .AddFilter<ConsoleLoggerProvider>("Quantori", LogLevel.Information));
-        services.AddTransient<Example1>();
+        services.AddTransient<DynamicallyTypedDataInEntities>();
     })
     .UseConsoleLifetime()
     .Build();
 
-var example = host.Services.GetRequiredService<Example1>();
+var example = host.Services.GetRequiredService<DynamicallyTypedDataInEntities>();
 
 if(ShouldCreateUsers())
 {
